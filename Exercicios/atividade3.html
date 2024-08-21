@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo do Fatorial</title>
+</head>
+<body>
+    <script>
+        function calcularFatorial(n) {
+            if (n < 0) return null;
+            if (n === 0 || n === 1) return 1;
+            return n * calcularFatorial(n - 1);
+        }
+
+        function obterNumeroECalcularFatorial() {
+            let numero = parseInt(prompt("Digite um número inteiro positivo:"), 10);
+
+            while (isNaN(numero) || numero < 0 || !Number.isInteger(numero)) {
+                alert("Por favor, insira um número inteiro positivo.");
+                numero = parseInt(prompt("Digite um número inteiro positivo:"), 10);
+            }
+
+            let fatorial = calcularFatorial(numero);
+            alert("O fatorial de " + numero + " é " + fatorial + ".");
+        }
+
+        obterNumeroECalcularFatorial();
+    </script>
+</body>
+</html>

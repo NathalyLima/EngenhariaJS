@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Tipo de Dado</title>
+</head>
+<body>
+    <script>
+        const entrada = prompt("Digite um dado:");
+        function verificarTipo(dado) {
+            if (!isNaN(dado) && dado.trim() !== '') {
+                const numero = Number(dado);
+                if (Number.isInteger(numero)) {
+                    return 'Number';
+                }
+            }
+            return 'String';
+        }
+        const desejaVerificar = confirm("Deseja verificar o tipo do dado informado?");
+        const tipoDado = verificarTipo(entrada);
+        let mensagem;
+
+        if (desejaVerificar) {
+            mensagem = `O tipo do dado informado é: ${tipoDado}`;
+        } else {
+            mensagem = "Obrigado por visitar esta página.";
+        }
+        document.body.textContent = mensagem;
+    </script>
+</body>
+</html>
