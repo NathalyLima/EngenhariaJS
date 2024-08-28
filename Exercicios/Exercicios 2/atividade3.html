@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Verificar se a Palavra é Palíndromo</h1>
+    <input type="text" id="texto" placeholder="Digite uma palavra">
+    <br>
+    <button onclick="verificarPalindromo()">Verificar</button>
+
+    <script>
+        function verificarPalindromo() {
+            const texto = document.getElementById('texto').value;
+            const textoLimpo = texto.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+            const ehPalindromo = textoLimpo === textoLimpo.split('').reverse().join('');
+            if (ehPalindromo) {
+                alert('O texto é um palíndromo!');
+            } else {
+                alert('O texto não é um palíndromo.');
+            }
+        }
+    </script>
+
+</body>
+</html>
