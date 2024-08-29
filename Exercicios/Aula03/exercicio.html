@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 3</title>
+</head>
+<body>
+    <h2>Adicionar e Exibir Valores</h2>
+    <form id="Form">
+        <label for="inputField">Digite algo:</label>
+        <input type="text" id="inputField" name="inputField" required>
+        <button type="submit">Adicionar</button>
+    </form>
+ 
+    <h2>Dados Cadastrados:</h2>
+    <ol id="Lista"></ol>
+ 
+    <script>
+        const dataArray = [];
+        const form = document.getElementById('Form');
+        const inputField = document.getElementById('inputField');
+        const dataList = document.getElementById('Lista');
+ 
+        function updateList() {
+            dataList.innerHTML = '';
+            const sortedArray = dataArray.slice().sort();
+            sortedArray.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = item;
+                dataList.appendChild(listItem);
+            });
+        }
+ 
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+ 
+            const value = inputField.value.trim();
+            if (value) {
+                dataArray.push(value);
+                updateList();
+                inputField.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
