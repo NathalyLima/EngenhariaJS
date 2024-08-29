@@ -8,21 +8,18 @@
 <body>
     <script>
         function mostrarHora() {
-    const agora = new Date();
-    const horas = String(agora.getHours());
-    const minutos = String(agora.getMinutes());
-    const segundos = String(agora.getSeconds());
-    const horarioAtual = `${horas}:${minutos}:${segundos}`;
-    
-   
-    alert(horarioAtual);
-    
- 
-    setTimeout(mostrarHora, 1000);
-}
+            const agora = new Date();
+            const horas = String(agora.getHours()).padStart(2, '0');
+            const minutos = String(agora.getMinutes()).padStart(2, '0');
+            const segundos = String(agora.getSeconds()).padStart(2, '0');
+            const horarioAtual = `${horas}:${minutos}:${segundos}`;
+            
+            alert(horarioAtual);
+            
+            setTimeout(mostrarHora, 1000);
+        }
 
-
-mostrarHora();
+        mostrarHora();
     </script>
 </body>
 </html>
