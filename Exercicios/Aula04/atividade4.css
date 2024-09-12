@@ -1,0 +1,115 @@
+/* Reset básico */
+body, h1, label, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo do formulário */
+  form {
+    font-family: Helvetica, Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 200px;
+  }
+  
+  /* Título */
+  h1 {
+    font-size: 26px;
+    color: #000;
+    margin-bottom: 30px;
+  }
+  
+  /* Labels */
+  label {
+    display: block;
+    font-size: 10px;
+    color: #222;
+    opacity: 0.9;
+    margin-bottom: 5px;
+  }
+  
+  /* Inputs */
+  input[type="text"],
+  input[type="email"] {
+    font-size: 12px;
+    color: #999;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Inputs específicos para telefone */
+  input[type="text"].telefone {
+    width: 100%;
+  }
+  
+  /* Erro */
+  .erro {
+    color: red;
+    font-size: 10px;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  /* Botões */
+  button {
+    font-size: 12px;
+    background-color: #eee;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  /* Layout dos campos */
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .form-row .form-group {
+    width: 48%;
+  }
+  
+  /* Ajustes para campos de telefone e perfil */
+  .telefone-row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  
+  .telefone-row .form-group {
+    width: 40%;
+  }
+  
+  /* Campos de perfil */
+  .perfil-row {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  /* Campo curso e matrícula */
+  .curso-matricula {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  
+  .curso-matricula .form-group {
+    width: 48%;
+  }
+  
+  /* Botões de envio e redefinição */
+  .submit-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
