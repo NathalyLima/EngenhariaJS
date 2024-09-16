@@ -1,11 +1,9 @@
-/* Reset básico */
 body, h1, label, input, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Estilo do formulário */
   form {
     font-family: Helvetica, Arial, sans-serif;
     max-width: 800px;
@@ -13,14 +11,12 @@ body, h1, label, input, button {
     padding: 200px;
   }
   
-  /* Título */
   h1 {
     font-size: 26px;
     color: #000;
     margin-bottom: 30px;
   }
   
-  /* Labels */
   label {
     display: block;
     font-size: 10px;
@@ -29,7 +25,6 @@ body, h1, label, input, button {
     margin-bottom: 5px;
   }
   
-  /* Inputs */
   input[type="text"],
   input[type="email"] {
     font-size: 12px;
@@ -41,12 +36,11 @@ body, h1, label, input, button {
     margin-bottom: 10px;
   }
   
-  /* Inputs específicos para telefone */
   input[type="text"].telefone {
     width: 100%;
   }
   
-  /* Erro */
+  
   .erro {
     color: red;
     font-size: 10px;
@@ -54,7 +48,7 @@ body, h1, label, input, button {
     margin-top: 5px;
   }
   
-  /* Botões */
+
   button {
     font-size: 12px;
     background-color: #eee;
@@ -65,7 +59,7 @@ body, h1, label, input, button {
     margin: 10px;
   }
   
-  /* Layout dos campos */
+  
   .form-row {
     display: flex;
     justify-content: space-between;
@@ -76,7 +70,7 @@ body, h1, label, input, button {
     width: 48%;
   }
   
-  /* Ajustes para campos de telefone e perfil */
+  
   .telefone-row {
     display: flex;
     justify-content: space-between;
@@ -87,14 +81,14 @@ body, h1, label, input, button {
     width: 40%;
   }
   
-  /* Campos de perfil */
+  
   .perfil-row {
     display: flex;
     flex-direction: column;
     
   }
   
-  /* Campo curso e matrícula */
+  
   .curso-matricula {
     display: flex;
     justify-content: space-between;
@@ -106,7 +100,7 @@ body, h1, label, input, button {
     width: 48%;
   }
   
-  /* Botões de envio e redefinição */
+  
   .submit-buttons {
     display: flex;
     justify-content: center;
