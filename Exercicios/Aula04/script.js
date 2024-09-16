@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Adiciona event listeners para os campos
   document.getElementById('nome').addEventListener('blur', validarNome);
   document.getElementById('email').addEventListener('blur', validarEmail);
   document.getElementById('dataNascimento').addEventListener('blur', validarDataNascimento);
@@ -10,8 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('lattes').addEventListener('blur', validarLattes);
   document.getElementById('curso').addEventListener('blur', validarCurso);
   document.getElementById('matriculaAluno').addEventListener('blur', validarMatricula);
-  
-  // Inicialmente exibe o formulário de professor
   exibirCamposPerfil('professor');
 });
 
@@ -43,7 +40,6 @@ function validarDataNascimento() {
   const data = document.getElementById("dataNascimento").value;
   const erroData = document.getElementById("erroData");
   
-  // O input type="date" já valida a data no formato yyyy-mm-dd.
   if (!data) {
     erroData.textContent = "Data é obrigatória.";
     return false;
@@ -113,7 +109,6 @@ function exibirCamposPerfil(perfil) {
   }
 }
 
-// Inicialmente exibe o formulário de professor
 document.addEventListener('DOMContentLoaded', () => {
   exibirCamposPerfil('professor');
 });
@@ -156,7 +151,6 @@ function validarLattes() {
 function validarFormulario(event) {
   event.preventDefault();
 
-  // Validações individuais
   const nomeValido = validarNome();
   const emailValido = validarEmail();
   const dataValida = validarDataNascimento();
@@ -164,7 +158,6 @@ function validarFormulario(event) {
   const telefoneCelularValido = validarTelefoneCelular();
   const matriculaValida = validarMatricula();
 
-  // Se todos os campos forem válidos
   if (nomeValido && emailValido && dataValida && telefoneFixoValido && telefoneCelularValido && matriculaValida) {
     const perfil = document.querySelector('input[name="perfil"]:checked').value;
     const nome = document.getElementById("nome").value;
