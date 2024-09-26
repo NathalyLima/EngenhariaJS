@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letreiro em Loop</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function MeuElemento({ texto }) {
+            return (
+                <div>
+                    <h1>{texto}</h1>
+                </div>
+            );
+        }
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+
+        const frase = 'Venha estudar na FATEC!';
+        let textoAtual = '';
+        let index = 0;
+        let apagando = false;
+
+        function tick() {
+            if (!apagando && index < frase.length) {
+                textoAtual += frase[index];
+                index++;
+            } else if (apagando && index > 0) {
+                textoAtual = textoAtual.slice(0, -1);
+                index--;
+            }
+
+            if (index === frase.length) {
+                setTimeout(() => apagando = true, 1000);
+            }
+
+            if (index === 0 && apagando) {
+                apagando = false;
+            }
+
+            root.render(<MeuElemento texto={textoAtual} />);
+        }
+
+        setInterval(tick, 150);
+    </script>
+</body>
+</html>
